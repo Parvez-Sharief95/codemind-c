@@ -9,7 +9,6 @@ int main()
         n/=10;
         s=s+r;
         p=p*r;
-        
     }
     printf("%d",p-s);
 }
