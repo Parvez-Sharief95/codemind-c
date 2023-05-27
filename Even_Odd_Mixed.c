@@ -1,27 +1,32 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int n,m,c=0,r=0,b;
-    scanf("%d",&n);
-    b=log10(n)+1;
-    while(n!=0)
+    int a,i,c=0,e=0,o=0,b;
+    scanf("%d",&a);
+    b=a;
+    for(i=0;a>0;i++)
     {
-        m=n%10;
-        n=n/10;
-        if(m%2==0)
-        c++;
+        if(a>0)
+        {
+            c++;
+            a/=10;
+        }
     }
-    if(c==b)
-    {
-        printf("Even");
-    }
-    else if(c==0)
-    {
-        printf("Odd");
-    }
-    else
-    {
-        printf("Mixed");
-    }
+        int arr[c];
+        for(i=0;i<c;i++)
+        {
+            arr[i]=b%10;
+            b/=10;
+            if(arr[i]%2==0)
+                e++;
+            else
+                o++;
+        }
+        if(e==c)
+            printf("Even");
+        else if(o==c)
+            printf("Odd");
+        else
+            printf("Mixed");
+    
 }
